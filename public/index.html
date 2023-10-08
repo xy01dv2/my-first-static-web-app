@@ -28,8 +28,8 @@
       }
       async function get() {
         const id = 1;
-        const endpoint = `/data-api/rest/Person/Id`;
-        const response = await fetch(`${endpoint}/${id}`);
+        const endpoint = '/data-api/rest/Person/Id';
+        const response = await fetch('${endpoint}/${id}');
         const result = await response.json();
         console.table(result.value);
       }
@@ -40,7 +40,7 @@
         };
       
         const endpoint = '/data-api/rest/Person/Id';
-        const response = await fetch(`${endpoint}/${id}`, {
+        const response = await fetch('${endpoint}/${id}', {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)
@@ -65,11 +65,11 @@
       async function del() {
         const id = 3;
         const endpoint = '/data-api/rest/Person/Id';
-        const response = await fetch(`${endpoint}/${id}`, {
+        const response = await fetch('${endpoint}/${id}', {
           method: "DELETE"
         });
         if(response.ok) {
-          console.log(`Record deleted: ${ id }`)
+          console.log('Record deleted: ${ id }')
         } else {
           console.log(response);
         }
